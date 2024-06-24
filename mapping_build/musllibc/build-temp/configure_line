@@ -1,0 +1,1 @@
+--srcdir=/home/porterlu/sel4-tutorials-manifest/projects/musllibc --prefix=/home/porterlu/sel4-tutorials-manifest/mapping_build/musllibc/build-temp/stage  --target=x86_64 --enable-warnings --disable-shared --enable-static
