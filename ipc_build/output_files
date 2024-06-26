@@ -1,0 +1,8 @@
+/home/porterlu/sel4_tutorial/ipc_build/.tutegen/ipc/gen/ipc.md
+/home/porterlu/sel4_tutorial/ipc_build/.tutegen/ipc/gen/.tasks
+/home/porterlu/sel4_tutorial/ipc_build/.tutegen/ipc/gen/client_1.c
+/home/porterlu/sel4_tutorial/ipc_build/.tutegen/ipc/gen/client_2.c
+/home/porterlu/sel4_tutorial/ipc_build/.tutegen/ipc/gen/server.c
+/home/porterlu/sel4_tutorial/ipc_build/.tutegen/ipc/gen/CMakeLists.txt
+/home/porterlu/sel4_tutorial/ipc_build/.tutegen/ipc/gen/.manifest.obj
+/home/porterlu/sel4_tutorial/ipc_build/.tutegen/ipc/gen/.allocator.obj
