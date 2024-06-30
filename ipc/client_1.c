@@ -16,7 +16,7 @@ int main(int c, char *argv[]) {
     int id = 1;
     
     printf("Client %d: waiting for badged endpoint\n", id);
-    seL4_SetCapReceivePath(cnode, badged_endpoint, seL4_WordBits);  // when sending the capability, the kernel will put the capability into the position specified by the paht 
+    seL4_SetCapReceivePath(cnode, badged_endpoint, seL4_WordBits);  // when sending the capability, the kernel will put the capability into the position specified by the path
     seL4_SetMR(0, id);                                              // when sending the message to the server, the id will be set in the 0th register
     seL4_MessageInfo_t info = seL4_MessageInfo_new(0, 1, 0, 1);     // label, capsUnwrapped, extraCaps, length
     info = seL4_Call(endpoint, info);                               // send to the endpoint and wait for a reply
