@@ -24,13 +24,13 @@ int main(int c, char *argv[]) {
     /* wait for the server to send us an endpoint */
     printf("Client %d: received badged endpoint\n", id);
 
-    for (int i = 0; i < ARRAY_SIZE(messages); i++) {
+    for (int i = 0; i < ARRAY_SIZE(messages); i++) {                
         int j;
-        for (j = 0; messages[i][j] != '\0'; j++) {                  
+        for (j = 0; messages[i][j] != '\0'; j++) {                   
             seL4_SetMR(j, messages[i][j]);                          // put the character into the register
         }
         info = seL4_MessageInfo_new(0, 0, 0, j);
-        seL4_Call(badged_endpoint, info);
+        seL4_Call(badged_endpoint, info);			    // client sends a message to the server
     }
     return 0;
 }

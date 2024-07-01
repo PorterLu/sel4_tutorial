@@ -48,13 +48,13 @@ int main(int c, char *argv[]) {
 
              error = seL4_CNode_SaveCaller(cnode, free_slot, seL4_WordBits);  // save caller badge into specific slot
              assert(error == 0);
-             info = seL4_Recv(endpoint, &sender); // receiver message
+             info = seL4_Recv(endpoint, &sender); 	// receiver message
              for(int i = 0; i < seL4_MessageInfo_get_length(info); i++) {
-               printf("%c\n", (char)seL4_GetMR(i));
+               printf("%c\n", (char)seL4_GetMR(i));	
              }
              printf("\n");
 
-             seL4_Send(free_slot, seL4_MessageInfo_new(0, 0, 0, 0));	// 
+             seL4_Send(free_slot, seL4_MessageInfo_new(0, 0, 0, 0));	// server sends a message to the previous sender
 
              info = seL4_ReplyRecv(endpoint, info, &sender); // receive and reply
         }
